@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory name="sessionFactory">
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://211.149.215.209:3306/windmill?useUnicode=true&amp;characterEncoding=UTF-8</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLInnoDBDialect</property>
+        <mapping class="com.mavenMVC.entity.Activity"/>
+        <mapping class="com.mavenMVC.entity.ActivityParticipant"/>
+        <mapping class="com.mavenMVC.entity.Article"/>
+        <mapping class="com.mavenMVC.entity.Class"/>
+        <mapping class="com.mavenMVC.entity.Response"/>
+        <mapping class="com.mavenMVC.entity.Teacher"/>
+        <mapping class="com.mavenMVC.entity.User"/>
+        <mapping class="com.mavenMVC.entity.BuyerUser"/>
+        <mapping class="com.mavenMVC.entity.SellerUser"/>
+        <mapping class="com.mavenMVC.entity.VerifyCode"/>
+        <mapping class="com.mavenMVC.entity.Security"/>
+        <mapping class="com.mavenMVC.entity.Commodity"/>
+        <mapping class="com.mavenMVC.entity.Compete"/>
+        <mapping class="com.mavenMVC.entity.OrderForm"/>
+        <mapping class="com.mavenMVC.entity.Collect"/>
+        <mapping class="com.mavenMVC.entity.ExtractMoney"/>
+        <mapping class="com.mavenMVC.entity.FeedBack"/>
+        
+        <mapping class="com.mavenMVC.entity.CensusRegister"/>
+        <mapping class="com.mavenMVC.entity.MUserInfo"/>
+        <mapping class="com.mavenMVC.entity.FloatingPopulation"/>
+        <mapping class="com.mavenMVC.entity.HouseInfo"/>
+        
+        
+    </session-factory>
+</hibernate-configuration>
