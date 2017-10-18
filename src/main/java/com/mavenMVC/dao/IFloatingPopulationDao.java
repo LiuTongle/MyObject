@@ -8,4 +8,6 @@ public interface IFloatingPopulationDao {
 
 	FloatingPopulation getByIdNumber(String idNumber);
 
+	void update(FloatingPopulation floatingPopulation, Long id);
+
 }

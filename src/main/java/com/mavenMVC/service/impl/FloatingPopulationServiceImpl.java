@@ -16,7 +16,12 @@ public class FloatingPopulationServiceImpl implements IFloatingPopulationService
 	
 	@Override
 	public void upload(FloatingPopulation floatingPopulation) {
-		floatingPopulationDao.upload(floatingPopulation);
+	    FloatingPopulation byIdNumber = this.floatingPopulationDao.getByIdNumber(floatingPopulation.getIdentification());
+	      if(byIdNumber != null) {
+	         this.floatingPopulationDao.update(floatingPopulation, byIdNumber.getID());
+	      } else {
+	         this.floatingPopulationDao.upload(floatingPopulation);
+	      }
 	}
 
 	@Override

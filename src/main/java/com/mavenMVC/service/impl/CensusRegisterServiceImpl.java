@@ -17,7 +17,12 @@ public class CensusRegisterServiceImpl implements ICensusRegisterService {
 	
 	@Override
 	public void upload(CensusRegister censusRegister) {
-		CensusRegisterDao.upload(censusRegister);
+		 CensusRegister byIdNumber = this.CensusRegisterDao.getByIdNumber(censusRegister.getIdentification());
+	      if(byIdNumber != null) {
+	         this.CensusRegisterDao.update(censusRegister, byIdNumber.getID());
+	      } else {
+	         this.CensusRegisterDao.upload(censusRegister);
+	      }
 	}
 
 	@Override
